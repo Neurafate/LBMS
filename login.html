@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="css\login.css">
   </head>
   <body>
-
-<form class="box" action="index.html" method="post">
-  <h1>Login</h1>
-  <input type="text" name="" placeholder="Username">
-  <input type="password" name="" placeholder="Password">
-  <input type="submit" name="" value="Login">
-</form>
-
-
+    <form class="box" action="index.html" method="post">
+      <h1>Login</h1>
+      <input type="text" id="frm1" name="frm1" placeholder="Username">
+      <input type="password" id="frm2" name="frm2" placeholder="Password">
+      <input id="bt1" type="button" name="" value="Login" onclick="getinfo()">
+      <input id="bt2" type="button" name="" value="Register" onclick="window.location.href='register.html';">
+    </form>
   </body>
+  <script>
+  function getinfo() {
+    var usrnm = document.getElementById("frm1").value;
+    var passwd = document.getElementById("frm2").value;
+  }
+  </script>
 </html>
