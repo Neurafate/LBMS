@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Register</title>
     <link rel="stylesheet" href="css\login.css">
   </head>
   <body>
@@ -10,7 +10,7 @@
       <h1>Register</h1>
       <input type="text" id="frm1" name="frm1" placeholder="Username">
       <input type="text" id="frm4" name="frm4" placeholder="E-Mail">
-      <input type="password" id="frm2" name="frm2" placeholder="Password">
+      <input type="password" id="frm2" name="frm2" placeholder="Password"><span id='charError'  style="color: white;"></span>
       <input type="password" id="frm3" name="frm3" placeholder="Confirm Password"> <h3 id="smallpp" style="color:white;"></h3>
       <input id="bt1" type="button" name="" value="Submit" onclick="submit1()">
     </form>
@@ -23,6 +23,9 @@
     var Email = document.getElementById("frm4").value;
     if(passwd!=cpasswd) {
       document.getElementById("smallpp").innerHTML = "Passwords do not match";
+    }
+    if (passwd.length<8){
+      document.getElementById("charError").innerHTML="Password should have 8 minimum characters!"
     }
   }
   </script>
