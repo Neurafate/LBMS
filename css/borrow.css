@@ -6,11 +6,18 @@
 #bgimg{
   width: 100%;
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
 
 }
 .overlay{
   width: 100%;
-  height: 100%;
+  height: 120%;
   background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6));
   position: absolute;
   top: 0;
@@ -27,16 +34,12 @@
   position: absolute;
 
   left: 10px;
-  top:20%;
+  top:100px;
 
   align-items: baseline;
-  gap: 30px;
+  gap:15px;
 }
-.pp{
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-}
+
 img{
   border-radius: 20px;
 }
